@@ -33,5 +33,21 @@ $ ./narou help
 ```
 
 デフォルトの設定は自分の好みにしてあるので、お好みで `./narou settings` してください。
+
+## DockerHub向け使い方
+
+* /opt/mybooksにWEB小説をダウンロードするように設定してあります
+* /opt/outputに変換済みデータを出力するように設定してあります
+* お好みのディレクトリをvolume mountして実行してください
+
+実行例
+```
+OUTPUT_DIR=${HOME}/.narou/output
+MYBOOKS_DIR=${HOME}/.narou/mybooks
+docker run -v ${MYBOOKS_DIR}:/opt/mybooks -v ${OUTPUT_DIR}:/opt/output -it amitsuka/narourb-docker narou help
+```
+
+シェルスクリプトにしておくと楽です。githubで公開しているsourceのほうに入れてあるので参考にしてみてください。
+
 enjoy!
 
