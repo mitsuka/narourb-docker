@@ -6,3 +6,23 @@ jobs:
       - checkout
       - run: make build amazon_eula=yes
       - run: make test amazon_eula=yes
+  nightly-build:
+    machine: true
+    steps:
+      - checkout
+      - run: make test amazon_eula=yes
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - build
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 1 * * *"
+          filters:
+            branches:
+              only: master
+
+    jobs:
+      - nightly-build
