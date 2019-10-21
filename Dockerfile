@@ -20,8 +20,8 @@ RUN cd /opt/aozora; unzip /opt/AozoraEpub3-1.1.0b46.zip
 RUN cd /opt/aozora; tar xfzv /opt/kindlegen_linux_2.6_i386_v2_9.tar.gz kindlegen
 RUN add-apt-repository -y ppa:brightbox/ruby-ng 
 RUN apt-get update && apt-get install -y \
-    ruby2.3 \
-    ruby2.3-dev
+    ruby2.4 \
+    ruby2.4-dev
 RUN yes | sudo gem install narou
 WORKDIR /opt/mybooks/
 RUN narou init -p /opt/aozora/ -l 1.6

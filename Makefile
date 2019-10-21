@@ -21,3 +21,6 @@ tag:
 
 run:
 	./narou help
+
+test: build
+	docker run --rm amitsuka/narourb-docker narou version
