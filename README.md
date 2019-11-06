@@ -38,12 +38,15 @@ $ ./narou help
 
 ## DockerHub向け使い方
 
+https://hub.docker.com/r/amitsuka/narourb-docker で公開しています。
+
 * /opt/mybooksにWEB小説をダウンロードするように設定してあります
 * /opt/outputに変換済みデータを出力するように設定してあります
 * お好みのディレクトリをvolume mountして実行してください
 
 実行例
 ```
+docker pull amitsuka/narourb-docker
 OUTPUT_DIR=${HOME}/.narou/output
 MYBOOKS_DIR=${HOME}/.narou/mybooks
 docker run -v ${MYBOOKS_DIR}:/opt/mybooks -v ${OUTPUT_DIR}:/opt/output -it amitsuka/narourb-docker narou help
