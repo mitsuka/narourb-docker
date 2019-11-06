@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/mitsuka/narourb-docker/tree/master.svg?style=svg)](https://circleci.com/gh/mitsuka/narourb-docker/tree/master)
+
 # Narou.rb on Docker
 
 Narou.rbの動作する環境をまるっとDocker上に用意しました。
