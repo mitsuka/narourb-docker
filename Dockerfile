@@ -15,7 +15,6 @@ ENV LANG=ja_JP.UTF-8
 RUN mkdir -p /opt/aozora /opt/kindlegen /opt/mybooks
 COPY binary/AozoraEpub3-1.1.0b46.zip /opt/
 RUN cd /opt/aozora; unzip /opt/AozoraEpub3-1.1.0b46.zip 
-RUN cd /opt/aozora; tar xfzv /opt/kindlegen_linux_2.6_i386_v2_9.tar.gz kindlegen
 RUN add-apt-repository -y ppa:brightbox/ruby-ng 
 RUN apt-get update && apt-get install -y \
     ruby2.4 \
