@@ -4,13 +4,13 @@ jobs:
     machine: true
     steps:
       - checkout
-      - run: make build amazon_eula=yes
-      - run: make test amazon_eula=yes
+      - run: make build
+      - run: make test
   nightly-build:
     machine: true
     steps:
       - checkout
-      - run: make test amazon_eula=yes
+      - run: make test
 workflows:
   version: 2
   commit:
