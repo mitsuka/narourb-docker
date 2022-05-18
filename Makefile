@@ -8,7 +8,7 @@ help:
 	@echo  "Available targets: help, build, run"
 
 build:
-	docker build --build-arg amazon_eula=$(amazon_eula) -t amitsuka/narourb-docker .
+	docker build -t amitsuka/narourb-docker .
 
 push: login tag
 	docker push $(ECR):$(TAG)
