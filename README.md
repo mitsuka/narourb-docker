@@ -14,18 +14,21 @@ AozoraEpub3はGPLv3なので配布物を加工せずそのまま同梱してい�
 ## AozoraEpub3
 
 https://github.com/hmdev/AozoraEpub3
+から
+https://github.com/kyukyunyorituryo/AozoraEpub3
+に変更
 
 ## KindleGen
 
 https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765211
-
+配布終了したのとKindleがEPUBに対応したので使用を止めました
 
 # 使い方
 
 docker imageのbuildはmakeでできます。
 
 ```
-$ make build amazon_eula=yes
+$ make build
 ```
 
 narou.rbをそのまま使うように使えるshell scriptを同梱しておきました。
