@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
     openjdk-8-jre \
     unzip
 ENV LANG=ja_JP.UTF-8
-RUN mkdir -p /opt/aozora /opt/kindlegen /opt/mybooks
+RUN mkdir -p /opt/aozora /opt/kindlegen /opt/mybooks /opt/output
 RUN cd /opt; wget https://github.com/kyukyunyorituryo/AozoraEpub3/releases/download/${AOZORA_VERSION}/${AOZORA_FILENAME}
 RUN cd /opt; unzip /opt/${AOZORA_FILENAME}
 RUN add-apt-repository -y ppa:brightbox/ruby-ng 
